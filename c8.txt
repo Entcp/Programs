@@ -1,0 +1,14 @@
+//Program for Electric Field Intensity ddue to N point charges
+clc; clear all;
+N=input ('Enter the number of point charges:');
+P=input ('Enter the coordinates of point at which E is to be calculated in the form [x y z]:');
+epso=input ('Enter the value of permittivity of the medium:');
+E=0
+for M=1:N
+    Q=input ('Enter the magnitude of the point charge:');
+    T=input ('Enter the point at which charge is located as [x y z]:');
+    R=norm (P-T);
+    EN=Q/(4*pi*epso*R*R);
+    E=E+EN
+end
+disp('The Resultant Electric Field Intensity=',E,'V/m');

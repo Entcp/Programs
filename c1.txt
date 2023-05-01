@@ -1,0 +1,20 @@
+//CASE 1
+// Principle od Pattern Multiplication
+clear;
+clc;
+lambda=1;
+d=lambda/2;
+beta=(2*%pi)/lambda;
+delta=0;//Defining delta as a phase of difference between dipoles
+phi=0:0.01:2*%pi; // Variation of the theta from 0 to 360 degrees
+subplot(2,2,1);
+EP=cos(%pi/2*(cos(phi)));
+polarplot(phi,abs(EP)); // Plot of single element pattern
+title('ELEMENT PATTERN');
+AF =cos(%pi*(cos(phi)+delta)) //Expression for an Array Factor
+subplot(2,2,2);
+polarplot(phi,abs(AF)); //Plot of Array Pattern
+title('ARRAY FACTOR PATTERN');
+subplot(2,2,3.5);
+polarplot(phi,abs(EP).*abs(AF)); //Plot of Total Field Pattern of Array
+title('TOTAL ARRAY PATTERN');
