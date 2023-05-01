@@ -1,0 +1,22 @@
+import cv2
+xyz=cv2.imread('bike.jpeg',1)
+cv2.imshow('image',xyz)
+
+print('size of the image', xyz.size)
+print('shape of the image',xyz.shape)
+
+cv2.waitkey()
+cv2.destroyAllWindows
+
+print(" \n brightness of image:",xyz[100,100,1]) 
+p=days[100,100]
+print(' \n display 100 th pixel intensity:',p)
+a=xyz[0:100,0:100]
+cv2.imshow('crop image',a)
+
+b=xyz[5,5,2]
+print('\n one pixel intensity:',b)
+
+
+print('\n display first five rows and columns of image:')
+print(xyz[0.5,0:5,1])
