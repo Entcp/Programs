@@ -1,0 +1,10 @@
+import cv2
+abc= cv2.imread("F:/nature img.jpg",1)
+cv2.imshow('nature img',abc)
+print("size of the image:",abc.size)
+print("shape of image:", abc.shape)
+print("type of the image:", abc.dtype)
+print('brightness:',abc[100,100,0])
+print(abc)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
