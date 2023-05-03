@@ -1,9 +1,0 @@
-import cv2
-abc=cv2.imread('bike.jpeg',1)
-cv2.imshow('image',abc)
-print ('size of the image', abc.size)
-print ('shape of the image', abc.shape)
-xyz = 255-abc
-cv2.imshow('negative',xyz)
-cv2.waitKey(0) 
-cv2.destroyAllWindows()
